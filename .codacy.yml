@@ -3,4 +3,7 @@ exclude_paths:
   - "**.spec.ts"
   - "**.json"
   - "**index.ts"
-  - "**.min.js"
+  - "**.js"
+  - "**.xml"
+  - "**.yml"
+  - "**.md"
