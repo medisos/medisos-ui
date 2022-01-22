@@ -1,3 +1,6 @@
+![Integrity Badge](https://github.com/medisos/medisos-ui/actions/workflows/main.yml/badge.svg)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ae4bafbc3a1b4998b59faa11d6ca7c83)](https://www.codacy.com/gh/medisos/medisos-ui/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=medisos/medisos-ui&amp;utm_campaign=Badge_Grade)
+
 # MedisosUi
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.

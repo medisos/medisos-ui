@@ -1,4 +1,4 @@
-name: CI-CD
+name: Build & Test & Deploy
 
 on:
   push:
@@ -25,6 +25,12 @@ jobs:
         run: npm run ci:test
       - name: Build app
         run: npm run ci:build
+      - name: Run codacy-coverage-reporter
+        uses: codacy/codacy-coverage-reporter-action@master
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          api-token: ${{ secrets.CODACY_API_TOKEN }}
+          coverage-reports: coverage/medisos-ui/lcov.info
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.1
         with:
