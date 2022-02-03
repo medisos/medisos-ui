@@ -1,9 +1,15 @@
 <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
-  <button (click)="logout()">
-    Log out
-  </button>
+  <button class="auth-btn logged-in-btn" *ngIf="auth.user$ | async as user" mat-fab [matMenuTriggerFor]="loggedInMenu" [style.background-image]="'url(' + user.picture + ')'"></button>
+  <mat-menu #loggedInMenu="matMenu">
+    <a [routerLink]="['/account']" mat-menu-item><mat-icon>account_circle</mat-icon> Account</a>
+    <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon> Logout</button>
+  </mat-menu>
 </ng-container>
 
 <ng-template #loggedOut>
-  <button (click)="login()">Log in</button>
+  <button color="basic" class="auth-btn logged-out-btn" mat-fab [matMenuTriggerFor]="loggedOutMenu"><mat-icon color="primary" class="account-icon">account_circle</mat-icon></button>
+  <mat-menu #loggedOutMenu="matMenu">
+    <button mat-menu-item (click)="login()">Sign in</button>
+    <button mat-menu-item (click)="signup()">Sign up</button>
+  </mat-menu>
 </ng-template>

@@ -18,4 +18,9 @@ export class AuthButtonComponent {
   logout() {
     this.auth.logout({ returnTo: environment.authLogoutUri })
   }
+
+  signup() {
+    this.auth.loginWithPopup({ redirect_uri: environment.authRedirectUri, screen_hint: "signup" });
+  }
+
 }
