@@ -7,7 +7,9 @@ export const environment = {
   auth0: {
     domain: "",
     clientId: ""
-  }
+  },
+  authRedirectUri: "http://localhost:4200/auth/callback",
+  authLogoutUri: "http://localhost:4200"
 };
 
 /*

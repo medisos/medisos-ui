@@ -7,11 +7,15 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from "./homepage/homepage.component";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AuthButtonComponent } from './auth-button/auth-button.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    AuthButtonComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
