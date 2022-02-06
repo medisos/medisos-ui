@@ -1,15 +1,15 @@
 <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
   <button class="auth-btn logged-in-btn" *ngIf="auth.user$ | async as user" mat-fab [matMenuTriggerFor]="loggedInMenu" [style.background-image]="'url(' + user.picture + ')'"></button>
   <mat-menu #loggedInMenu="matMenu">
-    <a [routerLink]="['/account']" mat-menu-item><mat-icon>account_circle</mat-icon> Account</a>
-    <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon> Logout</button>
+    <a [routerLink]="['/account']" mat-menu-item><mat-icon>manage_accounts</mat-icon><span translate>user.account</span></a>
+    <button mat-menu-item (click)="logout()"><mat-icon>logout</mat-icon> <span translate>auth.logout</span></button>
   </mat-menu>
 </ng-container>
 
 <ng-template #loggedOut>
   <button color="basic" class="auth-btn logged-out-btn" mat-fab [matMenuTriggerFor]="loggedOutMenu"><mat-icon color="primary" class="account-icon">account_circle</mat-icon></button>
   <mat-menu #loggedOutMenu="matMenu">
-    <button mat-menu-item (click)="login()">Sign in</button>
-    <button mat-menu-item (click)="signup()">Sign up</button>
+    <button mat-menu-item (click)="login()"><mat-icon>login</mat-icon> <span translate>auth.signin</span></button>
+    <button mat-menu-item (click)="signup()"><mat-icon>person_add</mat-icon><span translate>auth.signup</span></button>
   </mat-menu>
 </ng-template>

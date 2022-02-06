@@ -1,0 +1,16 @@
+{
+  "homepage": {
+    "greeting": "Welcome on MediSos"
+  },
+  "common": {
+    "appName": "MediSos"
+  },
+  "user": {
+    "account": "Account"
+  },
+  "auth": {
+    "signin": "Log in",
+    "signup": "Register",
+    "logout": "Log out"
+  }
+}

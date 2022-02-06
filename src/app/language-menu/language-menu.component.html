@@ -1,0 +1,5 @@
+<button mat-button [matMenuTriggerFor]="languageMenu">{{language.toLocaleUpperCase()}}</button>
+<mat-menu #languageMenu="matMenu">
+  <button *ngIf="language !== 'fr'" (click)="changeLanguage('fr')" mat-menu-item>FR</button>
+  <button *ngIf="language !== 'en'" (click)="changeLanguage('en')" mat-menu-item>EN</button>
+</mat-menu>
